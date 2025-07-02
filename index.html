@@ -1,9 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kevin Johnson - Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+    .sidebar {
+      flex: 1 1 250px;
+      max-width: 300px;
+      padding-right: 2rem;
+    }
+    .sidebar img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .main {
+      flex: 2 1 600px;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #1e90ff;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        padding-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kevin Johnson</h1>
+    <nav>
+      <a href="index.html">Resume</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <img src="your-photo.jpg" alt="Photo of Kevin Johnson" />
+      <p><strong>Email:</strong> kerjohns@mtu.edu</p>
+      <p><strong>Phone:</strong> (920) 371-1930</p>
+      <p><strong>Location:</strong> Green Bay, WI</p>
+    </div>
+
+    <div class="main">
+      <section>
+        <h2>About Me</h2>
+        <p>Graduate student in Chemical and Environmental Engineering at UCR, passionate about sustainable energy, biosensors, and hands-on engineering innovation. Currently interning at NLC Energy and leading MTU’s Clean Diesel Enterprise project.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>NLC Energy</strong> – Chemical Engineering Intern (2025)</li>
+          <li><strong>Clean Diesel Enterprise</strong> – Team Lead, Biodiesel Skid Project</li>
+          <li><strong>Research Assistant</strong> – MTU Nanofiber Gas Sensor Lab</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p><strong>BS Chemical Engineering</strong> – Michigan Technological University (3.73 GPA)</p>
+        <p><strong>MS Chemical & Environmental Engineering</strong> – UCR (Incoming)</p>
+      </section>
+    </div>
+  </div>
+</body>
 </html>
