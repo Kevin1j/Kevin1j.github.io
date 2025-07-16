@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kevin Johnson - Resume</title>
   <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .contact-form .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .contact-form button {
+      align-self: start;
+      padding: 0.5rem 1rem;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .contact-form button:hover {
+      background-color: #187bcd;
+    }
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -73,16 +106,15 @@
   
   <div class="container">
     <div class="sidebar">
-      <form action="https://formspree.io/f/xvgqolna" method="POST">
-        <label>
-          Your email:
-          <input type="email" name="email">
-        </label>
-        <label>
-          Your message:
-          <textarea name="message"></textarea>
-        </label>
-        <!-- your other form fields go here -->
+      <form action="https://formspree.io/f/xvgqolna" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="email">Your email:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message:</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
         <button type="submit">Send</button>
       </form>
     </div>
